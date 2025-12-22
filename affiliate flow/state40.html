@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manage Partnerships Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: "#09110C",
+                            primary: "#45D891",
+                            secondary: "#24724D",
+                            surface: "#F9FAF8",
+                            dark: "#0B170F",
+                            light: "#C8FCFF",
+                            accent: "#BCFCA1",
+                            muted: "#5BAA77",
+                        }
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'modal': '0 20px 40px -5px rgba(0, 0, 0, 0.2), 0 10px 20px -5px rgba(0, 0, 0, 0.1)',
+                        'soft': '0 2px 10px rgba(0,0,0,0.03)',
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(to bottom right, #45D891, #24724D)',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09110C;
+            color: #F9FAF8;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1E4D2F;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg min-h-screen relative p-6 md:p-12 lg:px-20 lg:py-16">
+    <div class="max-w-[1400px] mx-auto opacity-30 pointer-events-none blur-[1px]">
+        <header class="flex justify-between items-start mb-14">
+            <div>
+                <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Manage Partnerships</h1>
+                <p class="text-brand-muted text-sm font-medium">Review requests and manage your brand partnerships</p>
+            </div>
+            <div class="relative">
+                <button
+                    class="bg-brand-dark p-3 rounded-full hover:bg-brand-secondary transition-colors duration-200 h-12 w-12 flex items-center justify-center border border-brand-muted/20">
+                    <span class="material-symbols-outlined text-brand-primary"
+                        style="font-size: 24px; font-variation-settings: 'FILL' 1;">notifications</span>
+                </button>
+                <span
+                    class="absolute -top-1 -right-1 bg-brand-primary text-brand-bg text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center border-2 border-brand-bg">2</span>
+            </div>
+        </header>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 px-2">
+            <div class="flex items-center space-x-5">
+                <div
+                    class="w-[72px] h-[52px] bg-brand-dark rounded-[20px] flex items-center justify-center flex-shrink-0 border border-brand-muted/20">
+                    <span class="material-symbols-outlined text-brand-primary"
+                        style="font-variation-settings: 'FILL' 1;">person</span>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white">12</div>
+                    <div class="text-xs text-brand-muted font-medium mt-1">Active founders</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5">
+                <div
+                    class="w-[72px] h-[52px] bg-brand-dark rounded-[20px] flex items-center justify-center flex-shrink-0 border border-brand-muted/20">
+                    <span class="material-symbols-outlined text-brand-primary"
+                        style="font-variation-settings: 'FILL' 1;">person_add</span>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white">5</div>
+                    <div class="text-xs text-brand-muted font-medium mt-1">Pending Requests</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5">
+                <div
+                    class="w-[72px] h-[52px] bg-brand-dark rounded-[20px] flex items-center justify-center flex-shrink-0 border border-brand-muted/20">
+                    <span class="material-symbols-outlined text-brand-primary"
+                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white">7</div>
+                    <div class="text-xs text-brand-muted font-medium mt-1">Active Campaigns</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5">
+                <div
+                    class="w-[72px] h-[52px] bg-brand-dark rounded-[20px] flex items-center justify-center flex-shrink-0 border border-brand-muted/20">
+                    <span class="material-symbols-outlined text-brand-primary">attach_money</span>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white">25%</div>
+                    <div class="text-xs text-brand-muted font-medium mt-1">Average Commision</div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="inline-flex bg-brand-dark p-1.5 rounded-xl gap-1 border border-brand-muted/20">
+                <button
+                    class="px-6 py-2.5 bg-brand-primary shadow-sm rounded-lg text-sm font-medium text-brand-bg">Partnership
+                    Requests</button>
+                <button
+                    class="px-6 py-2.5 rounded-lg text-sm font-medium text-brand-muted hover:text-white hover:bg-white/5 transition-all">Active
+                    Partnerships</button>
+                <button
+                    class="px-6 py-2.5 rounded-lg text-sm font-medium text-brand-muted hover:text-white hover:bg-white/5 transition-all">Resources</button>
+            </div>
+        </div>
+    </div>
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-bg/60 backdrop-blur-sm">
+        <div
+            class="bg-brand-bg rounded-[2rem] shadow-modal w-full max-w-[1100px] relative border border-brand-primary/10 overflow-hidden h-auto max-h-[95vh] flex flex-col">
+            <button class="absolute top-6 right-6 text-brand-muted hover:text-white transition-colors z-20">
+                <span class="material-symbols-outlined" style="font-size: 30px;">cancel</span>
+            </button>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 p-12 h-full overflow-y-auto">
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div
+                        class="bg-[#0D1C12] rounded-[20px] w-full aspect-[16/11] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <button
+                            class="w-full flex justify-between items-center bg-brand-dark border border-brand-muted/20 hover:border-brand-primary/40 p-5 rounded-2xl transition-all text-left group shadow-sm hover:shadow-md">
+                            <span class="text-base font-medium text-white pl-1">Market Fit &amp; Story</span>
+                            <span
+                                class="material-symbols-outlined text-brand-muted group-hover:text-brand-primary transition-colors">add</span>
+                        </button>
+                        <button
+                            class="w-full flex justify-between items-center bg-brand-dark border border-brand-muted/20 hover:border-brand-primary/40 p-5 rounded-2xl transition-all text-left group shadow-sm hover:shadow-md">
+                            <span class="text-base font-medium text-white pl-1">Product Showcase</span>
+                            <span
+                                class="material-symbols-outlined text-brand-muted group-hover:text-brand-primary transition-colors">add</span>
+                        </button>
+                        <button
+                            class="w-full flex justify-between items-center bg-brand-dark border border-brand-muted/20 hover:border-brand-primary/40 p-5 rounded-2xl transition-all text-left group shadow-sm hover:shadow-md">
+                            <span class="text-base font-medium text-white pl-1">Branding</span>
+                            <span
+                                class="material-symbols-outlined text-brand-muted group-hover:text-brand-primary transition-colors">add</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    <div class="bg-brand-dark rounded-[20px] p-8 pb-10 border border-brand-muted/20 shadow-sm">
+                        <h2 class="text-xl font-bold text-white mb-2">EcoLife Essentials</h2>
+                        <p class="text-brand-muted text-base font-normal">Sustainable Home Kit</p>
+                    </div>
+                    <div class="bg-brand-dark rounded-[20px] p-8 flex-grow border border-brand-muted/20 shadow-sm">
+                        <h3 class="text-base font-medium text-white mb-6">Recent Updates</h3>
+                        <div class="space-y-5">
+                            <div
+                                class="bg-black/20 border border-brand-muted/20 p-5 rounded-xl flex items-start gap-5 group hover:border-brand-primary/30 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-brand-primary/10 rounded-full flex-shrink-0 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-brand-primary text-[20px]">calendar_month</span>
+                                </div>
+                                <div class="pt-0.5">
+                                    <div class="text-sm font-bold text-white mb-1">Campaign Scheduled</div>
+                                    <p class="text-[11px] leading-relaxed text-brand-muted font-medium pr-2">
+                                        The campaign will run for a total of 14 days, starting from March 1st and ending
+                                        on March 14th.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-black/20 border border-brand-muted/20 p-5 rounded-xl flex items-start gap-5 group hover:border-brand-primary/30 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-brand-light/20 rounded-full flex-shrink-0 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-brand-light text-[20px]">image</span>
+                                </div>
+                                <div class="pt-0.5">
+                                    <div class="text-sm font-bold text-white mb-1">Visual Asset</div>
+                                    <p class="text-[11px] leading-relaxed text-brand-muted font-medium pr-2">
+                                        Uploaded a Visual for their Startup
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-black/20 border border-brand-muted/20 p-5 rounded-xl flex items-start gap-5 group hover:border-brand-primary/30 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-brand-accent/20 rounded-full flex-shrink-0 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-brand-accent text-[20px]">description</span>
+                                </div>
+                                <div class="pt-0.5">
+                                    <div class="text-sm font-bold text-white mb-1">Market Research</div>
+                                    <p class="text-[11px] leading-relaxed text-brand-muted font-medium pr-2">
+                                        Submitted their market research and campaign preferences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
