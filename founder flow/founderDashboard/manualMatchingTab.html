@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Affiliate Matches</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#45D891",
+                        "primary-dark": "#24724D",
+                        "background-light": "#F9FAF8",
+                        "background-dark": "#09110C",
+                        "surface-dark": "#121E16", // Slightly lighter for cards
+                        "proovd-dark-green": "#1E4D2F",
+                        "proovd-mid-green": "#5BAA77",
+                        "proovd-pale-green": "#BCFCA1",
+                        "proovd-pale-cyan": "#C8FCFF",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '0.75rem',
+                        '2xl': '1rem',
+                        '3xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-[#F9FAF8] min-h-screen transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <header class="flex justify-between items-start mb-10">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Affiliate Matches</h1>
+                <p class="text-gray-500 dark:text-gray-400">Send pitches to matched affiliates and track their responses
+                </p>
+            </div>
+            <div class="relative">
+                <button
+                    class="p-2 rounded-full bg-white dark:bg-surface-dark shadow-sm hover:bg-gray-50 dark:hover:bg-[#1E2C22] transition-colors border border-gray-100 dark:border-[#1E4D2F]">
+                    <span class="material-icons-outlined text-gray-600 dark:text-[#BCFCA1]">notifications</span>
+                </button>
+                <span
+                    class="absolute top-0 right-0 -mt-1 -mr-1 flex h-5 w-5 items-center justify-center rounded-full bg-gray-600 dark:bg-[#45D891] text-[10px] font-bold text-white dark:text-black">2</span>
+            </div>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="p-6 flex items-center gap-4">
+                <div
+                    class="h-12 w-12 rounded-xl bg-gray-100 dark:bg-[#1E4D2F] flex items-center justify-center text-gray-500 dark:text-[#45D891]">
+                    <span class="material-icons-outlined">person</span>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-gray-900 dark:text-white">6</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">Total Matches</div>
+                </div>
+            </div>
+            <div class="p-6 flex items-center gap-4">
+                <div
+                    class="h-12 w-12 rounded-xl bg-gray-100 dark:bg-[#1E4D2F] flex items-center justify-center text-gray-500 dark:text-[#BCFCA1]">
+                    <span class="material-icons-outlined">mail</span>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-gray-900 dark:text-white">18</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">Pitches Sent</div>
+                </div>
+            </div>
+            <div class="p-6 flex items-center gap-4">
+                <div
+                    class="h-12 w-12 rounded-xl bg-gray-100 dark:bg-[#1E4D2F] flex items-center justify-center text-gray-500 dark:text-[#C8FCFF]">
+                    <span class="material-icons-outlined">pie_chart</span>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-gray-900 dark:text-white">7</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">Response Rate</div>
+                </div>
+            </div>
+            <div class="p-6 flex items-center gap-4">
+                <div
+                    class="h-12 w-12 rounded-xl bg-gray-100 dark:bg-[#1E4D2F] flex items-center justify-center text-gray-500 dark:text-[#5BAA77]">
+                    <span class="material-icons-outlined">workspace_premium</span>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-gray-900 dark:text-white">25%</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">Top Performer</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+            <div
+                class="bg-gray-100 dark:bg-surface-dark p-1 rounded-xl flex space-x-1 w-full sm:w-auto overflow-x-auto">
+                <button
+                    class="px-4 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white whitespace-nowrap">
+                    Partnership Requests
+                </button>
+                <button
+                    class="px-4 py-2 text-sm font-medium rounded-lg bg-white dark:bg-[#1E4D2F] shadow-sm text-gray-900 dark:text-[#BCFCA1] whitespace-nowrap">
+                    Manual Matching
+                </button>
+                <button
+                    class="px-4 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white whitespace-nowrap">
+                    Accepted Partners
+                </button>
+            </div>
+            <div class="relative w-full sm:w-auto">
+                <button
+                    class="w-full sm:w-auto flex items-center justify-between gap-2 bg-white dark:bg-surface-dark border border-gray-200 dark:border-[#1E4D2F] px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#1E2C22]">
+                    <span>Sort</span>
+                    <span class="material-icons-outlined text-[16px]">expand_more</span>
+                </button>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <div
+                class="bg-white dark:bg-surface-dark rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 dark:border-[#1E4D2F] flex flex-col sm:flex-row items-start gap-6">
+                <div class="flex-shrink-0">
+                    <img alt="Alex Thompson Profile"
+                        class="h-20 w-20 rounded-full object-cover border-2 border-white dark:border-[#1E4D2F] bg-gray-200"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJptc05XYAftOqyis6IzadveDTejcyERmVqxHdfPmPDL7EXiNsku8hj83aDEBkxCqa1OaSZub-wdyWAEJbRarsVYSBQvQOm2vx9AKBqYe3BkWviqzsLlFtGPOPizzpA1Ys5TC_ttdnRk6AopSpVGbAqVHPUsZMJiON3Fjgo-hMp3cZYvM2dgAJUKYLIgBcpp10V0Tj7H1aWSUnFAcj3z2AUF8Qaul53Kzsw1E083wDz641YVfBMGixeUV_mngh_YCDpqx-RXyCzgK" />
+                </div>
+                <div class="flex-grow w-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Alex Thompson</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Tech</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#BCFCA1]">
+                            50K followers
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#C8FCFF]">
+                            6.1% engagement
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-[#5ceba2] hover:to-[#2e8f61] text-black dark:text-[#09110C] font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
+                            Send Pitch
+                        </button>
+                        <div class="flex justify-center">
+                            <button
+                                class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-[#5BAA77] hover:text-gray-700 dark:hover:text-primary transition-colors">
+                                <span class="material-icons-outlined text-[18px]">visibility</span>
+                                <span>socials</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-surface-dark rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 dark:border-[#1E4D2F] flex flex-col sm:flex-row items-start gap-6">
+                <div class="flex-shrink-0">
+                    <img alt="Sarah Jenning Profile"
+                        class="h-20 w-20 rounded-full object-cover border-2 border-white dark:border-[#1E4D2F] bg-gray-200"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Crmx9RCAPD3oezTC9VUOY3ahBtIEas8ytFomf6D_0Y7Obx9z2CwBpRR4VmGb_a9YyXGIOzSHnUQoPA_4eqZyPD19R1OfxFaFd1-ugTbU0xO54t4BxMNwWoaB9OUh5RvhgNdabXOHDq792zyoDwELzA3ERS0g9HypsIxoqCG_MvWShoLMpJUSzwWtOhZwxyINzQFALsmxBoFiivT5P2jrhEvVy_OYSUWTJ2Pmj_61Wyd0DbebYpHZRInDu6T0aCYPsXib8rXLHZmo" />
+                </div>
+                <div class="flex-grow w-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sarah Jenning</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Lifestyle &amp; Tech</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#BCFCA1]">
+                            120K followers
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#C8FCFF]">
+                            4.8% engagement
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-[#5ceba2] hover:to-[#2e8f61] text-black dark:text-[#09110C] font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
+                            Send Pitch
+                        </button>
+                        <div class="flex justify-center">
+                            <button
+                                class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-[#5BAA77] hover:text-gray-700 dark:hover:text-primary transition-colors">
+                                <span class="material-icons-outlined text-[18px]">visibility</span>
+                                <span>socials</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-surface-dark rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 dark:border-[#1E4D2F] flex flex-col sm:flex-row items-start gap-6">
+                <div class="flex-shrink-0">
+                    <img alt="Marcus Chen Profile"
+                        class="h-20 w-20 rounded-full object-cover border-2 border-white dark:border-[#1E4D2F] bg-gray-200"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGtvDTWt2gDmrhowElPjmALGO8kJcC42vA3OWWM5-nO3ZR8pyBGQWnTcm3bjYDHrIVstlsfyCBNk_i_Rug0GDrx_UZAgQcIg2pizF02W6pUQujFpo_f9OHf4cfPwOJD8ifLvingXZ_2iCITmXIgy29TsYPSJTv5WHNWYSG2kY_c7De046Y_KqdBuE_A1egD2bCIJrcHDGesT7D4rBL9O4ddFN1SenGYwanJ6vWfjlh8KNLuqhjEjA50oMMb4DqdPyT1G7VfKTxNicg" />
+                </div>
+                <div class="flex-grow w-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Marcus Chen</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">SaaS Reviews</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#BCFCA1]">
+                            15K followers
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#1E4D2F] text-gray-700 dark:text-[#C8FCFF]">
+                            8.5% engagement
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-[#5ceba2] hover:to-[#2e8f61] text-black dark:text-[#09110C] font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
+                            Send Pitch
+                        </button>
+                        <div class="flex justify-center">
+                            <button
+                                class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-[#5BAA77] hover:text-gray-700 dark:hover:text-primary transition-colors">
+                                <span class="material-icons-outlined text-[18px]">visibility</span>
+                                <span>socials</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
