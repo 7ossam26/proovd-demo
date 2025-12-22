@@ -1,0 +1,198 @@
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Define Story Modal - PROOVD</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+            colors: {
+              primary: "#45D891", // The vibrant green
+              secondary: "#24724D", // Darker green for gradients
+              "primary-dark": "#1E4D2F",
+              "accent-light": "#BCFCA1",
+              "accent-blue": "#C8FCFF",
+              // Light Mode Palette
+              "background-light": "#F9FAF8",
+              "surface-light": "#FFFFFF",
+              "text-light-primary": "#1F2937",
+              "text-light-secondary": "#6B7280",
+              // Dark Mode Palette
+              "background-dark": "#09110C", // Deepest dark from prompt
+              "surface-dark": "#132019", // Slightly lighter for modal
+              "text-dark-primary": "#F9FAF8",
+              "text-dark-secondary": "#9CA3AF",
+            },
+            backgroundImage: {
+              "primary-gradient":
+                "linear-gradient(135deg, #45D891 0%, #24724D 100%)",
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      textarea::-webkit-scrollbar {
+        width: 8px;
+      }
+      textarea::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .dark textarea::-webkit-scrollbar-thumb {
+        background-color: #374151;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary min-h-screen p-6 md:p-10 flex flex-col transition-colors duration-300">
+    <header class="w-full flex justify-between items-start mb-10">
+      <div class="flex items-center">
+        <div
+          class="w-12 h-12 rounded-full bg-gray-200 dark:bg-white/10 flex items-center justify-center text-2xl font-bold text-gray-500 dark:text-gray-300 shadow-sm">
+          P
+        </div>
+      </div>
+      <div
+        class="bg-gray-600 dark:bg-surface-dark/80 backdrop-blur-sm text-white rounded-xl p-4 shadow-lg w-full max-w-sm border border-transparent dark:border-white/5">
+        <div class="flex justify-between items-start mb-3">
+          <p class="text-xs text-gray-200 w-2/3 leading-tight">
+            The more you complete the Less you'll Pay!
+          </p>
+          <div class="text-right">
+            <span class="block text-xl font-bold text-white">$15</span>
+            <span
+              class="block text-[10px] uppercase tracking-wider text-gray-300"
+              >Saved</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center justify-between gap-1 mt-1">
+          <div
+            class="h-2 w-full bg-white/30 rounded-full overflow-hidden flex gap-1 p-[2px]">
+            <div class="h-full w-1/5 bg-primary rounded-full"></div>
+            <div class="h-full w-1/5 bg-primary rounded-full"></div>
+            <div class="h-full w-1/5 bg-primary rounded-full"></div>
+            <div class="h-full w-1/5 bg-white/20 rounded-full"></div>
+            <div class="h-full w-1/5 bg-white/20 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow flex items-center justify-center w-full">
+      <div
+        class="w-full max-w-5xl bg-surface-light dark:bg-surface-dark rounded-3xl shadow-2xl p-8 md:p-10 relative border border-gray-100 dark:border-white/5">
+        <button
+          class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors rounded-full p-2 hover:bg-gray-100 dark:hover:bg-white/5">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6 18L18 6M6 6l12 12"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="text-primary-dark dark:text-primary">
+            <svg
+              class="w-8 h-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                clip-rule="evenodd"
+                d="M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 1.5h-3c.22 0 .441.023.657.072.035.876.734 1.575 1.603 1.61.168.007.338.019.507.031A1.516 1.516 0 0013.5 1.5z"
+                fill-rule="evenodd"></path>
+              <path
+                clip-rule="evenodd"
+                d="M3.75 6.75A3 3 0 00.75 9.75v9.375A3.375 3.375 0 004.125 22.5h9.75a3.375 3.375 0 003.375-3.375V9.75A3 3 0 0013.875 6.75H3.75zM4.5 9a.75.75 0 00-.75.75V10.5a.75.75 0 00.75.75h.75a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-.75zM3.75 13.5a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm.75 3a.75.75 0 00-.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 00.75-.75v-.75a.75.75 0 00-.75-.75h-.75zM8.25 9.375a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75zm.75 3.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h1 class="text-3xl font-bold text-gray-600 dark:text-gray-200">
+            Story
+          </h1>
+        </div>
+        <div class="relative w-full">
+          <div
+            class="relative rounded-2xl border-2 border-gray-400 dark:border-gray-500 bg-white dark:bg-[#09110C] focus-within:border-primary dark:focus-within:border-primary transition-colors overflow-hidden h-96 group">
+            <textarea
+              class="w-full h-full bg-transparent border-none outline-none resize-none p-8 text-lg leading-relaxed text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:ring-0"
+              placeholder="Define the problem you are solving (AI filled)..."></textarea>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <a
+            class="group flex items-center gap-4 bg-white dark:bg-[#1E2923] border border-gray-200 dark:border-gray-700 rounded-2xl p-3 pr-6 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all cursor-pointer"
+            href="#">
+            <div
+              class="w-12 h-12 flex items-center justify-center text-gray-700 dark:text-gray-300">
+              <svg
+                class="w-8 h-8 group-hover:text-primary transition-colors"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M9 15.75h.008v.008H9v-.008zm2.25.008H15V15h-3.75v.758zm0 2.25h.008v.008H11.25V18zm2.25.008H15V17.25h-1.5v.758zm-4.5-.008h.008v.008H9V18z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <span class="absolute text-[8px] font-bold mt-2 mr-0.5">PDF</span>
+            </div>
+            <div
+              class="text-sm font-semibold text-gray-700 dark:text-gray-200 leading-tight">
+              Our Guide to Defining <br />
+              your Problem
+            </div>
+          </a>
+          <div class="flex items-center gap-4 w-full md:w-auto justify-end">
+            <button
+              class="px-8 py-3 rounded-full border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-white/10 transition-colors w-full md:w-auto">
+              Cancel
+            </button>
+            <button
+              class="px-10 py-3 rounded-full bg-primary-gradient text-white dark:text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:opacity-95 transform active:scale-95 transition-all w-full md:w-auto">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+      <div
+        class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+      <div
+        class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#1E4D2F]/10 rounded-full blur-3xl"></div>
+    </div>
+  </body>
+</html>
