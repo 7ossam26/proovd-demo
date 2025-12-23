@@ -15,7 +15,7 @@
   --color-brand-text-muted: #6daa86;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
