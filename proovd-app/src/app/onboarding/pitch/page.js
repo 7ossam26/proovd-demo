@@ -49,19 +49,17 @@ export default function PitchPage() {
         <div className="absolute bottom-[-10%] right-[10%] w-[400px] h-[400px] bg-brand-accent-green/10 rounded-full blur-[80px]" />
       </div>
 
-      {!showMatch && (
-        <header className="absolute top-0 w-full p-8 flex justify-center z-20">
-          <div className="flex items-center gap-3">
-            <img src="/Logo.svg" alt="Proovd Logo" className="h-10 w-auto" />
-          </div>
-        </header>
-      )}
+      <header className="absolute top-0 w-full p-8 flex justify-center z-20">
+        <div className="flex items-center gap-3">
+          <img src="/Logo.svg" alt="Proovd Logo" className="h-10 w-auto" />
+        </div>
+      </header>
 
       <main className="w-full max-w-2xl flex flex-col items-center text-center space-y-8 z-10 mt-16">
         {/* Dynamic Title */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl font-extrabold font-display tracking-tight text-white drop-shadow-sm leading-tight">
-            Pitch your <br className="hidden md:block" />
+            Pitch your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-highlight to-brand-accent-cyan animate-pulse-glow">
               Business Idea
             </span>
@@ -198,14 +196,14 @@ export default function PitchPage() {
                         height:
                           voiceState === "recording"
                             ? [
-                              // Dynamic heights for recording
-                              Math.random() * 40 + 10,
-                              Math.random() * 80 + 20,
-                              Math.random() * 40 + 10,
-                            ]
+                                // Dynamic heights for recording
+                                Math.random() * 40 + 10,
+                                Math.random() * 80 + 20,
+                                Math.random() * 40 + 10,
+                              ]
                             : voiceState === "controls"
-                              ? Math.max(20, Math.sin(i) * 50 + 30) // Static-ish wave for controls
-                              : 8, // Flat for ready
+                            ? Math.max(20, Math.sin(i) * 50 + 30) // Static-ish wave for controls
+                            : 8, // Flat for ready
                         opacity: voiceState === "recording" ? 1 : 0.5,
                         boxShadow:
                           voiceState === "recording"
