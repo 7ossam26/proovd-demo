@@ -31,7 +31,7 @@ export default function AffiliateLayout({ children }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         <div className="flex items-center space-x-6">
           <div className="w-20 h-14 bg-brand-surface rounded-2xl flex items-center justify-center border border-brand-surface-light/30">
-            <span className="material-symbols-outlined text-brand-primary text-3xl">
+            <span className="material-symbols-outlined text-brand text-3xl">
               person
             </span>
           </div>
@@ -44,7 +44,7 @@ export default function AffiliateLayout({ children }) {
         </div>
         <div className="flex items-center space-x-6">
           <div className="w-20 h-14 bg-brand-surface rounded-2xl flex items-center justify-center border border-brand-surface-light/30">
-            <span className="material-symbols-outlined text-brand-primary text-3xl">
+            <span className="material-symbols-outlined text-brand text-3xl">
               person_add
             </span>
           </div>
@@ -57,7 +57,7 @@ export default function AffiliateLayout({ children }) {
         </div>
         <div className="flex items-center space-x-6">
           <div className="w-20 h-14 bg-brand-surface rounded-2xl flex items-center justify-center border border-brand-surface-light/30">
-            <span className="material-symbols-outlined text-brand-primary text-3xl">
+            <span className="material-symbols-outlined text-brand text-3xl">
               play_arrow
             </span>
           </div>
@@ -70,7 +70,7 @@ export default function AffiliateLayout({ children }) {
         </div>
         <div className="flex items-center space-x-6">
           <div className="w-20 h-14 bg-brand-surface rounded-2xl flex items-center justify-center border border-brand-surface-light/30">
-            <span className="material-symbols-outlined text-brand-primary text-3xl">
+            <span className="material-symbols-outlined text-brand text-3xl">
               attach_money
             </span>
           </div>
@@ -95,8 +95,8 @@ export default function AffiliateLayout({ children }) {
                 className={cn(
                   "px-6 py-2.5 rounded-lg text-sm font-medium transition-all",
                   isActive
-                    ? "bg-brand-primary text-brand-bg shadow-sm"
-                    : "text-brand-text-muted hover:text-brand-text hover:bg-white/5"
+                    ? "bg-brand text-brand-text shadow-sm"
+                    : "text-brand-text/60 hover:text-brand-text hover:bg-white/5"
                 )}>
                 {tab.name}
               </Link>

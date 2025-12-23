@@ -65,17 +65,17 @@ export default function FounderDashboard() {
               className={cn(
                 "relative px-4 py-2 text-sm font-medium rounded-lg transition-all z-10",
                 activeTab === tab.id
-                  ? "text-brand-bg bg-brand-text"
-                  : "text-brand-text-muted hover:text-brand-text"
+                  ? "text-brand-text bg-brand-primary"
+                  : "text-brand-text/60 hover:text-brand-text"
               )}>
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-brand-text rounded-lg shadow-sm -z-10"
+                  className="absolute inset-0 bg-brand rounded-lg shadow-sm -z-10"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
-              <span className={activeTab === tab.id ? "text-brand-bg" : ""}>
+              <span>
                 {tab.label}
               </span>
             </button>

@@ -71,7 +71,7 @@ export default function ActivePartnershipsPage() {
       {activePartnerships.map((partner) => (
         <div
           key={partner.id}
-          className="bg-brand-surface rounded-2xl shadow-lg border border-brand-surface-light/20 p-6 md:p-8 relative overflow-hidden group">
+          className="bg-brand-surface rounded-2xl shadow-lg border border-brand-border p-6 md:p-8 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary to-brand-secondary opacity-50" />
           <div className="flex flex-col md:flex-row gap-8 relative z-10">
             <div className="flex-shrink-0 mx-auto md:mx-0">
