@@ -12,6 +12,7 @@ export default function PasscodePage() {
   const [headerText, setHeaderText] = useState("Set your passcode"); // Dynamic header based on role? Or just standard?
   // Using standard text from HTML
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const inputs = useRef([]);
   const router = useRouter();
   const { login, role } = useRole();
@@ -47,15 +48,20 @@ export default function PasscodePage() {
       if (success) {
         setShowSuccessDialog(true);
       } else {
-        alert("Incorrect passcode");
+        triggerError("Incorrect passcode");
         setPasscode(["", "", ""]);
         inputs.current[0].focus();
       }
     } else {
-      alert("For this demo, the passcode is 777");
+      triggerError("For this demo, the passcode is 777");
       setPasscode(["", "", ""]);
       inputs.current[0].focus();
     }
+  };
+
+  const triggerError = (msg) => {
+    setErrorMessage(msg);
+    setTimeout(() => setErrorMessage(""), 3000);
   };
 
   const handleEnterDashboard = () => {
@@ -102,6 +108,20 @@ export default function PasscodePage() {
                   />
                 ))}
               </div>
+              <AnimatePresence>
+                {errorMessage && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="text-red-400 text-sm font-medium flex items-center gap-1.5 mt-2">
+                    <span className="material-symbols-outlined text-[16px]">
+                      error
+                    </span>
+                    {errorMessage}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <div className="flex justify-center pt-2">
