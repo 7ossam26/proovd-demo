@@ -109,7 +109,7 @@ export default function CampaignProgressPage() {
                     cy="64"
                     fill="transparent"
                     r="56"
-                    stroke="#1E4D2F"
+                    stroke="var(--color-brand-surface)"
                     strokeWidth="8"
                   />
                   <circle
@@ -201,9 +201,8 @@ export default function CampaignProgressPage() {
               ].map((affiliate, idx) => (
                 <div
                   key={idx}
-                  className={`grid grid-cols-12 gap-4 items-center ${
-                    idx > 0 ? "border-t border-brand-secondary/30 pt-4" : ""
-                  }`}>
+                  className={`grid grid-cols-12 gap-4 items-center ${idx > 0 ? "border-t border-brand-secondary/30 pt-4" : ""
+                    }`}>
                   <div className="col-span-4">
                     <div className="font-medium text-sm text-white">
                       {affiliate.name}
@@ -211,11 +210,10 @@ export default function CampaignProgressPage() {
                     <div className="text-xs text-gray-400 mt-0.5">
                       {affiliate.clicks} clicks{" "}
                       <span
-                        className={`ml-1 ${
-                          affiliate.clicksGrowth.startsWith("-")
+                        className={`ml-1 ${affiliate.clicksGrowth.startsWith("-")
                             ? "text-gray-500"
                             : "text-brand-primary"
-                        }`}>
+                          }`}>
                         {affiliate.clicksGrowth.startsWith("-") ? "↓" : "↑"}{" "}
                         {affiliate.clicksGrowth.replace("-", "")}
                       </span>
@@ -236,11 +234,10 @@ export default function CampaignProgressPage() {
                       {affiliate.pledges} pledges
                     </div>
                     <div
-                      className={`text-xs ${
-                        affiliate.pledgesGrowth.startsWith("-")
+                      className={`text-xs ${affiliate.pledgesGrowth.startsWith("-")
                           ? "text-gray-500"
                           : "text-brand-primary"
-                      }`}>
+                        }`}>
                       {affiliate.pledgesGrowth.startsWith("-") ? "↓" : "↑"}{" "}
                       {affiliate.pledgesGrowth.replace("-", "")}
                     </div>
@@ -350,7 +347,7 @@ export default function CampaignProgressPage() {
         </div>
         <div className="bg-brand-surface/50 border border-brand-secondary/30 rounded-2xl p-6 mb-6">
           <input
-            className="w-full bg-[#09110C] border border-brand-secondary rounded-lg px-4 py-3 text-sm text-gray-300 placeholder-gray-600 focus:ring-1 focus:ring-brand-primary focus:border-brand-primary outline-none mb-6"
+            className="w-full bg-brand-bg border border-brand-secondary rounded-lg px-4 py-3 text-sm text-gray-300 placeholder-gray-600 focus:ring-1 focus:ring-brand-primary focus:border-brand-primary outline-none mb-6"
             placeholder="Search Customers"
             type="text"
           />

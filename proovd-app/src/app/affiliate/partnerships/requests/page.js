@@ -85,7 +85,7 @@ function RequestCard({ request, onOpenDetail }) {
   }
 
   return (
-    <div className="bg-brand-surface/10 backdrop-blur-sm rounded-2xl p-10 lg:p-14 shadow-sm border border-brand-surface-light/20">
+    <div className="bg-brand-surface rounded-2xl p-10 lg:p-14 shadow-sm border border-brand-border">
       <div className="flex justify-between items-start mb-12">
         <div>
           <h2 className="text-3xl font-bold mb-3 text-white">{request.name}</h2>
@@ -122,11 +122,11 @@ function RequestCard({ request, onOpenDetail }) {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <button className="w-full py-4 border border-brand-surface-light/50 rounded-lg text-base font-medium text-brand-text hover:bg-brand-surface transition-colors flex items-center justify-center gap-3">
+        <button className="w-full py-4 border border-brand-border rounded-lg text-base font-medium text-brand-text hover:bg-brand-surface-light/10 transition-colors flex items-center justify-center gap-3">
           <span className="material-symbols-outlined text-lg">close</span>{" "}
           Reject
         </button>
-        <button className="w-full py-4 bg-brand-primary rounded-lg text-base font-bold text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
+        <button className="w-full py-4 bg-brand-primary rounded-lg text-base font-bold text-brand-bg hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
           <span className="material-symbols-outlined text-lg">
             check_circle
           </span>{" "}

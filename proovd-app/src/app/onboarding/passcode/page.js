@@ -98,7 +98,7 @@ export default function PasscodePage() {
                     onChange={(e) => handleChange(i, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(i, e)}
                     placeholder="•"
-                    className="w-14 h-16 sm:w-16 sm:h-20 text-center text-3xl font-bold bg-brand-bg border border-brand-surface-light/50 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-brand-primary outline-none transition-all shadow-inner placeholder-brand-secondary"
+                    className="appearance-none w-14 h-16 sm:w-16 sm:h-20 text-center text-3xl font-bold bg-brand-bg border border-brand-surface-light/50 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-brand-primary outline-none transition-all shadow-inner placeholder-brand-secondary"
                   />
                 ))}
               </div>

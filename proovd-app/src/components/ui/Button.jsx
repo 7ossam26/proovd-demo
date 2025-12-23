@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const variants = {
   primary: "bg-brand text-brand-bg hover:opacity-90 shadow-lg shadow-brand/20",
   secondary:
-    "bg-brand-surface text-brand-text hover:bg-brand-surface-light border border-brand-surface-light/30",
+    "bg-brand-surface text-brand-text hover:bg-brand-surface-light border border-brand-border",
   outline:
     "bg-transparent border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-brand-bg",
   ghost: "bg-transparent text-brand-text hover:bg-brand-surface/50",

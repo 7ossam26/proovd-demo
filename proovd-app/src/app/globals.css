@@ -7,12 +7,13 @@
   /* Brand Colors */
   --color-brand: #45d891;
   --color-brand-bg: #09110c;
-  --color-brand-surface: #1e4d2f;
+  --color-brand-surface: #142E1D;
   --color-brand-surface-light: #5baa77;
   --color-brand-highlight: #bcfca1;
   --color-brand-accent: #c8fcff;
   --color-brand-text: #f9faf8;
-  --color-brand-text-muted: #6daa86;
+  --color-brand-text-muted: #5BAA77;
+  --color-brand-border: #1E4D2F;
 }
 
 @theme inline {
@@ -27,6 +28,7 @@
   --color-brand-accent: var(--color-brand-accent);
   --color-brand-text: var(--color-brand-text);
   --color-brand-text-muted: var(--color-brand-text-muted);
+  --color-brand-border: var(--color-brand-border);
 
   --font-display: "Satoshi", sans-serif;
   --font-sans: "Satoshi", sans-serif;
@@ -49,4 +51,15 @@ body {
 /* Gradient Background Utility */
 .bg-gradient-brand {
   background: linear-gradient(to right, #45d891 2%, #24724d 100%);
+}
+
+/* Hide scrollbar/spin buttons for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
