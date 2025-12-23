@@ -71,7 +71,7 @@ export function ManualMatching() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <button className="w-full bg-gradient-to-r from-brand-primary to-brand-primary-dark hover:from-[#5ceba2] hover:to-[#2e8f61] text-brand-bg font-bold py-3 px-4 rounded-xl shadow-lg shadow-brand-primary/20 transition-all transform hover:-translate-y-0.5 active:scale-[0.99]">
+              <button className="w-full bg-brand hover:opacity-90 text-brand-bg font-bold py-3 px-4 rounded-xl shadow-lg shadow-brand/20 transition-all transform hover:-translate-y-0.5 active:scale-[0.99]">
                 Send Pitch
               </button>
               <div className="flex justify-center">

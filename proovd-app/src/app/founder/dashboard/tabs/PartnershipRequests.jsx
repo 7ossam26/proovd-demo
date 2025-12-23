@@ -40,14 +40,14 @@ export function PartnershipRequests() {
             "bg-brand-surface rounded-[2rem] border shadow-xl p-6 md:p-8 relative overflow-hidden group transition-all duration-300 transform hover:-translate-y-1",
             partner.slug === "awaiting"
               ? "border-yellow-500/20 hover:border-yellow-500/50 shadow-none dark:shadow-none"
-              : "border-brand-primary/20 hover:border-brand-primary/50"
+              : "border-brand/20 hover:border-brand/50"
           )}>
           <div
             className={cn(
               "absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none opacity-60 bg-gradient-to-br via-transparent to-transparent",
               partner.slug === "awaiting"
                 ? "from-yellow-500/10"
-                : "from-brand-primary/10"
+                : "from-brand/10"
             )}
           />
 
@@ -58,7 +58,7 @@ export function PartnershipRequests() {
                   "h-28 w-28 rounded-full p-[3px] bg-gradient-to-br flex-shrink-0 relative overflow-hidden shadow-lg",
                   partner.slug === "awaiting"
                     ? "from-yellow-500 via-yellow-500/50 to-transparent"
-                    : "from-brand-primary via-brand-primary/50 to-transparent"
+                    : "from-brand via-brand/50 to-transparent"
                 )}>
                 <div className="rounded-full overflow-hidden w-full h-full bg-brand-surface">
                   <img
@@ -77,14 +77,14 @@ export function PartnershipRequests() {
                     "inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold border shadow-sm backdrop-blur-sm",
                     partner.slug === "awaiting"
                       ? "bg-yellow-500/20 text-yellow-500 border-yellow-500/20"
-                      : "bg-brand-primary/20 text-brand-primary border-brand-primary/20"
+                      : "bg-brand/20 text-brand border-brand/20"
                   )}>
                   <span
                     className={cn(
                       "w-1.5 h-1.5 rounded-full mr-2 animate-pulse",
                       partner.slug === "awaiting"
                         ? "bg-yellow-500"
-                        : "bg-brand-primary"
+                        : "bg-brand"
                     )}
                   />
                   {partner.status}
@@ -106,7 +106,7 @@ export function PartnershipRequests() {
                         "material-symbols-outlined text-sm transition-colors",
                         partner.slug === "awaiting"
                           ? "text-brand-text-muted group-hover/stat:text-yellow-500"
-                          : "text-brand-text-muted group-hover/stat:text-brand-primary"
+                          : "text-brand-text-muted group-hover/stat:text-brand"
                       )}>
                       {stat.icon}
                     </span>
@@ -125,7 +125,7 @@ export function PartnershipRequests() {
                 "flex items-center gap-2 transition-all text-sm font-semibold group/btn",
                 partner.slug === "awaiting"
                   ? "text-brand-text-muted hover:text-yellow-500"
-                  : "text-brand-text-muted hover:text-brand-primary"
+                  : "text-brand-text-muted hover:text-brand"
               )}>
               View Details
               <span className="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">

@@ -126,7 +126,7 @@ function RequestCard({ request, onOpenDetail }) {
           <span className="material-symbols-outlined text-lg">close</span>{" "}
           Reject
         </button>
-        <button className="w-full py-4 bg-brand-primary rounded-lg text-base font-bold text-brand-bg hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
+        <button className="w-full py-4 bg-brand rounded-lg text-base font-bold text-brand-bg hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
           <span className="material-symbols-outlined text-lg">
             check_circle
           </span>{" "}
@@ -164,7 +164,7 @@ function DetailModal({ request, onClose }) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-brand-bg rounded-[2rem] shadow-2xl w-full max-w-[1100px] relative border border-brand-primary/20 overflow-hidden h-auto max-h-[95vh] flex flex-col">
+        className="bg-brand-bg rounded-[2rem] shadow-2xl w-full max-w-[1100px] relative border border-brand/20 overflow-hidden h-auto max-h-[95vh] flex flex-col">
         <button
           onClick={onClose}
           className="absolute top-6 right-6 text-brand-text-muted hover:text-white transition-colors z-20">

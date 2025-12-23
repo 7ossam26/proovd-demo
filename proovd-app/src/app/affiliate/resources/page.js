@@ -51,14 +51,14 @@ export default function ResourcesPage() {
         {resources.map((res, i) => (
           <div
             key={i}
-            className="bg-brand-surface rounded-2xl p-8 border border-brand-surface-light/20 hover:border-brand-primary/30 transition-all group flex flex-col items-start gap-4 shadow-sm hover:shadow-md">
-            <div className="w-14 h-14 bg-brand-surface-light/10 rounded-xl flex items-center justify-center text-brand-primary group-hover:scale-110 transition-transform">
+            className="bg-brand-surface rounded-2xl p-8 border border-brand-surface-light/20 hover:border-brand/30 transition-all group flex flex-col items-start gap-4 shadow-sm hover:shadow-md">
+            <div className="w-14 h-14 bg-brand-surface-light/10 rounded-xl flex items-center justify-center text-brand group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined text-3xl">
                 {res.icon}
               </span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-brand-text mb-2 group-hover:text-brand-primary transition-colors">
+              <h3 className="text-xl font-bold text-brand-text mb-2 group-hover:text-brand transition-colors">
                 {res.category}
               </h3>
               <p className="text-brand-text-muted text-sm leading-relaxed">
@@ -69,7 +69,7 @@ export default function ResourcesPage() {
               <Button
                 variant="outline"
                 fullWidth
-                className="group-hover:bg-brand-surface-light/10 group-hover:text-brand-primary group-hover:border-brand-primary/30">
+                className="group-hover:bg-brand-surface-light/10 group-hover:text-brand group-hover:border-brand/30">
                 {res.action}
               </Button>
             </div>
@@ -86,7 +86,7 @@ export default function ResourcesPage() {
             Request specific materials for your unique campaign needs.
           </p>
         </div>
-        <Button className="bg-brand-primary text-brand-bg hover:opacity-90 font-bold px-8">
+        <Button className="bg-brand text-brand-bg hover:opacity-90 font-bold px-8">
           Contact Partner Support
         </Button>
       </div>
