@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09110c;
+  --foreground: #f9faf8;
+
+  /* Brand Colors */
+  --color-brand: #45d891;
+  --color-brand-bg: #09110c;
+  --color-brand-surface: #0b170f;
+  --color-brand-surface-light: #5baa77;
+  --color-brand-highlight: #bcfca1;
+  --color-brand-accent: #c8fcff;
+  --color-brand-text: #f9faf8;
+  --color-brand-text-muted: #5baa77;
+  --color-brand-border: #1e4d2f;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand: var(--color-brand);
+  --color-brand-primary: var(--color-brand);
+  --color-brand-bg: var(--color-brand-bg);
+  --color-brand-surface: var(--color-brand-surface);
+  --color-brand-surface-light: var(--color-brand-surface-light);
+  --color-brand-highlight: var(--color-brand-highlight);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-text: var(--color-brand-text);
+  --color-brand-text-muted: var(--color-brand-text-muted);
+  --color-brand-border: var(--color-brand-border);
+
+  --font-display: "Satoshi", sans-serif;
+  --font-sans: "Satoshi", sans-serif;
+}
+
+body {
+  background: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  font-family: "Satoshi", sans-serif;
+}
+
+/* Gradient Text Utility */
+.text-gradient {
+  background: linear-gradient(to right, #45d891 2%, #24724d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Background Utility */
+.bg-gradient-brand {
+  background: linear-gradient(to right, #45d891 2%, #24724d 100%);
+}
+
+/* Hide scrollbar/spin buttons for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
