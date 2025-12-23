@@ -63,7 +63,7 @@ export default function PitchPage() {
         {/* Dynamic Title */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl font-extrabold font-display tracking-tight text-white drop-shadow-sm leading-tight">
-            Pitch your <br className="hidden md:block" />
+            Pitch your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-highlight to-brand-accent-cyan animate-pulse-glow">
               Business Idea
             </span>
