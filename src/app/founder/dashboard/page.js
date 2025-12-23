@@ -30,15 +30,15 @@ export default function FounderDashboard() {
       </header>
 
       {/* Stats Grid MVP */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
         {[
           { label: "Total Matches", value: "6", icon: "person" },
           { label: "Pitches Sent", value: "18", icon: "email" },
           { label: "Response Rate", value: "7", icon: "pie_chart" },
           { label: "Top Performer", value: "25%", icon: "workspace_premium" },
         ].map((stat, i) => (
-          <div key={i} className="flex items-center gap-4">
-            <div className="w-16 h-12 rounded-2xl bg-brand-surface flex items-center justify-center">
+          <div key={i} className="flex items-center gap-3 sm:gap-4">
+            <div className="w-12 h-10 sm:w-16 sm:h-12 rounded-2xl bg-brand-surface flex items-center justify-center">
               <span className="material-symbols-outlined text-brand-text-muted">
                 {stat.icon}
               </span>

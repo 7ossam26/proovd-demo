@@ -28,7 +28,7 @@ export default function AffiliateLayout({ children }) {
       </header>
 
       {/* Key Metrics Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-16">
         <div className="flex items-center space-x-6">
           <div className="w-20 h-14 bg-brand-surface rounded-2xl flex items-center justify-center border border-brand-surface-light/30">
             <span className="material-symbols-outlined text-brand text-3xl">
@@ -36,8 +36,8 @@ export default function AffiliateLayout({ children }) {
             </span>
           </div>
           <div>
-            <div className="text-3xl font-bold text-brand-text">12</div>
-            <div className="text-sm text-brand-text-muted font-medium">
+            <div className="text-2xl md:text-3xl font-bold text-brand-text">12</div>
+            <div className="text-[10px] md:text-sm text-brand-text-muted font-medium">
               Active founders
             </div>
           </div>
@@ -49,8 +49,8 @@ export default function AffiliateLayout({ children }) {
             </span>
           </div>
           <div>
-            <div className="text-3xl font-bold text-brand-text">5</div>
-            <div className="text-sm text-brand-text-muted font-medium">
+            <div className="text-2xl md:text-3xl font-bold text-brand-text">5</div>
+            <div className="text-[10px] md:text-sm text-brand-text-muted font-medium">
               Pending Requests
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function AffiliateLayout({ children }) {
             </span>
           </div>
           <div>
-            <div className="text-3xl font-bold text-brand-text">7</div>
-            <div className="text-sm text-brand-text-muted font-medium">
+            <div className="text-2xl md:text-3xl font-bold text-brand-text">7</div>
+            <div className="text-[10px] md:text-sm text-brand-text-muted font-medium">
               Active Campaigns
             </div>
           </div>
@@ -75,8 +75,8 @@ export default function AffiliateLayout({ children }) {
             </span>
           </div>
           <div>
-            <div className="text-3xl font-bold text-brand-text">25%</div>
-            <div className="text-sm text-brand-text-muted font-medium">
+            <div className="text-2xl md:text-3xl font-bold text-brand-text">25%</div>
+            <div className="text-[10px] md:text-sm text-brand-text-muted font-medium">
               Average Commission
             </div>
           </div>
