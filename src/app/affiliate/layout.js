@@ -85,7 +85,7 @@ export default function AffiliateLayout({ children }) {
 
       {/* Navigation Tabs */}
       <div className="mb-12">
-        <div className="inline-flex bg-brand-surface p-1.5 rounded-xl gap-1 border border-brand-surface-light/20">
+        <div className="flex sm:inline-flex bg-brand-surface p-1.5 rounded-xl gap-1 border border-brand-surface-light/20 w-full sm:w-auto items-center">
           {tabs.map((tab) => {
             const isActive = pathname === tab.href;
             return (
@@ -93,7 +93,7 @@ export default function AffiliateLayout({ children }) {
                 key={tab.href}
                 href={tab.href}
                 className={cn(
-                  "px-6 py-2.5 rounded-lg text-sm font-medium transition-all",
+                  "flex-1 px-2 md:px-6 py-2.5 rounded-lg text-[10px] sm:text-xs md:text-sm font-medium transition-all flex items-center justify-center text-center leading-tight whitespace-normal min-h-[44px]",
                   isActive
                     ? "bg-brand text-brand-text shadow-sm"
                     : "text-brand-text/60 hover:text-brand-text hover:bg-white/5"
