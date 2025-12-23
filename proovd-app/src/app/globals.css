@@ -16,7 +16,7 @@
   --color-brand-border: #1E4D2F;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

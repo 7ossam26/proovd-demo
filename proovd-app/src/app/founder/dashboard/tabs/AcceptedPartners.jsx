@@ -29,6 +29,8 @@ export function AcceptedPartners() {
   const handleAction = (label) => {
     if (label === "View Metrics") {
       router.push("/founder/campaigns/progress");
+    } else if (label === "Product Page") {
+      router.push("/product");
     }
   };
 

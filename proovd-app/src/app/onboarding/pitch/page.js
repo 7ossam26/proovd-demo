@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import MatchOverlay from "@/components/features/MatchOverlay";
 
 // Animation variants for smooth transitions
 const containerVariants = {
@@ -17,14 +16,13 @@ const containerVariants = {
 export default function PitchPage() {
   const [mode, setMode] = useState("text"); // 'text' | 'voice'
   const [voiceState, setVoiceState] = useState("ready"); // 'ready' | 'recording' | 'controls'
-  const [showMatch, setShowMatch] = useState(false);
   const router = useRouter();
 
   // Wave Bar Configuration
   const bars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   const handleNext = () => {
-    setShowMatch(true);
+    router.push("/onboarding/idea-breakdown");
   };
 
   const handleMatchComplete = () => {
@@ -246,18 +244,12 @@ export default function PitchPage() {
           )}
         </AnimatePresence>
 
-        <AnimatePresence>
-          {showMatch && <MatchOverlay onComplete={handleMatchComplete} />}
-        </AnimatePresence>
-
-        {!showMatch && (
-          <footer className="absolute bottom-8 w-full text-center px-6 z-10">
-            <p className="text-sm md:text-base text-brand-text-muted/80 font-medium tracking-wide">
-              When you speak your Ideas out loud, you give them{" "}
-              <span className="text-brand-primary font-bold">Life</span>.
-            </p>
-          </footer>
-        )}
+        <footer className="absolute bottom-8 w-full text-center px-6 z-10">
+          <p className="text-sm md:text-base text-brand-text-muted/80 font-medium tracking-wide">
+            When you speak your Ideas out loud, you give them{" "}
+            <span className="text-brand-primary font-bold">Life</span>.
+          </p>
+        </footer>
       </main>
     </div>
   );
