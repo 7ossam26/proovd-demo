@@ -79,7 +79,7 @@ export default function PasscodePage() {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-secondary rounded-full blur-[100px] opacity-10 pointer-events-none" />
 
       <main className="w-full max-w-md relative z-10">
-        <div className="mb-8 text-center">
+        <div className="mb-4 md:mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4 tracking-tight">
             Start Experince
           </h1>
@@ -147,8 +147,13 @@ export default function PasscodePage() {
             </Button>
           </form>
 
-          <div className="mt-8 text-center">
-
+          <div className="mt-6 text-center">
+            <button
+              onClick={() => router.push("/founder/dashboard")}
+              className="text-brand-text-muted hover:text-brand-primary transition-colors text-sm font-medium flex items-center gap-2 mx-auto uppercase tracking-widest bg-brand-surface-light/5 px-4 py-2 rounded-full border border-brand-surface-light/10 hover:border-brand-primary/30">
+              Skip Onboarding
+              <span className="material-symbols-outlined text-sm">skip_next</span>
+            </button>
           </div>
         </div>
       </main>

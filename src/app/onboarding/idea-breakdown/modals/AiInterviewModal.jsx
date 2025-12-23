@@ -2,7 +2,14 @@
 
 import BreakdownModalLayout from "./BreakdownModalLayout";
 
-export default function AiInterviewModal({ isOpen, onClose }) {
+export default function AiInterviewModal({
+  isOpen,
+  onClose,
+  onSave,
+  currentSavings,
+  completedCount,
+  totalCards,
+}) {
   return (
     <BreakdownModalLayout
       isOpen={isOpen}
@@ -10,7 +17,10 @@ export default function AiInterviewModal({ isOpen, onClose }) {
       title="AI Interview"
       icon="smart_toy"
       guideTitle="Our Guide to recording a good interview"
-      onSave={() => onClose()}>
+      onSave={onSave}
+      currentSavings={currentSavings}
+      completedCount={completedCount}
+      totalCards={totalCards}>
       <div className="flex flex-col gap-8 w-full max-w-3xl mx-auto items-center text-center pt-8">
         <p className="text-brand-text text-lg leading-relaxed">
           Share a Video or Audio of you explaining your Idea. This is different

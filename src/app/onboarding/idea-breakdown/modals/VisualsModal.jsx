@@ -2,7 +2,14 @@
 
 import BreakdownModalLayout from "./BreakdownModalLayout";
 
-export default function VisualsModal({ isOpen, onClose }) {
+export default function VisualsModal({
+  isOpen,
+  onClose,
+  onSave,
+  currentSavings,
+  completedCount,
+  totalCards,
+}) {
   return (
     <BreakdownModalLayout
       isOpen={isOpen}
@@ -10,7 +17,10 @@ export default function VisualsModal({ isOpen, onClose }) {
       title="Visuals"
       icon="imagesmode"
       guideTitle="Our Guide to setting up good visuals"
-      onSave={() => onClose()}>
+      onSave={onSave}
+      currentSavings={currentSavings}
+      completedCount={completedCount}
+      totalCards={totalCards}>
       <div className="w-full space-y-4">
         {/* Upload Zone */}
         <div className="relative w-full rounded-2xl border-2 border-dashed border-brand-surface-light/30 bg-brand-surface-light/5 hover:bg-brand-surface-light/10 transition-colors cursor-pointer group h-72 flex flex-col items-center justify-center">

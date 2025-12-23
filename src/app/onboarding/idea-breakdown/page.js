@@ -13,9 +13,15 @@ export default function IdeaBreakdownPage() {
   const router = useRouter();
   const [selectedModal, setSelectedModal] = useState(null); // 'problem', 'solution', 'competition', 'visuals', 'ai-interview', 'story'
   const [showMatch, setShowMatch] = useState(false);
+  const [completedCards, setCompletedCards] = useState(new Set());
 
   const openModal = (type) => setSelectedModal(type);
   const closeModal = () => setSelectedModal(null);
+
+  const handleSave = (type) => {
+    setCompletedCards((prev) => new Set([...prev, type]));
+    closeModal();
+  };
 
   const handleNext = () => {
     // Show match overlay explicitly instead of redirecting to pitch
@@ -40,11 +46,11 @@ export default function IdeaBreakdownPage() {
     }
   };
 
-  // Calculate savings based on optional cards filled
-  // Assuming we track this locally or receive it. For now, defaulting to 0 as request didn't specify logic source.
-  const optionalCardsFilled = 0;
-  const potentialSavingsPerCard = 10;
-  const currentSavings = optionalCardsFilled * potentialSavingsPerCard;
+  // Calculate savings based on cards filled
+  const totalCards = 6;
+  const completedCount = completedCards.size;
+  const potentialSavingsPerCard = 15;
+  const currentSavings = completedCount * potentialSavingsPerCard;
 
   const BreakdownCard = ({
     title,
@@ -62,11 +68,10 @@ export default function IdeaBreakdownPage() {
       <div className="bg-brand-surface rounded-[2rem] p-6 shadow-lg hover:border-brand-primary transition-all duration-300 h-full relative overflow-hidden group-hover:shadow-[0_0_20px_rgba(69,216,145,0.15)] bg-opacity-80 backdrop-blur-sm border border-transparent">
         {/* Badge - Repositioned to be a pill inside the card */}
         <div
-          className={`absolute top-5 right-5 ${
-            isRequired
-              ? "bg-brand-primary/10 text-brand-primary border-brand-primary/20"
-              : "bg-brand-surface-light/10 text-brand-text/60 border-white/5"
-          } text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider border backdrop-blur-sm z-10`}>
+          className={`absolute top-5 right-5 ${isRequired
+            ? "bg-brand-primary/10 text-brand-primary border-brand-primary/20"
+            : "bg-brand-surface-light/10 text-brand-text/60 border-white/5"
+            } text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider border backdrop-blur-sm z-10`}>
           {isRequired ? "Required" : "Optional"}
         </div>
 
@@ -76,9 +81,14 @@ export default function IdeaBreakdownPage() {
           </h2>
           <p className="text-brand-text/70">
             {subtitle}
-            {isAiFilled && (
+            {isAiFilled && !completedCards.has(type) && (
               <span className="text-brand-primary text-[10px] font-bold bg-brand-primary/10 px-2 py-0.5 rounded-full ml-1 inline-block border border-brand-primary/20">
                 AI FILLED
+              </span>
+            )}
+            {completedCards.has(type) && (
+              <span className="text-brand-secondary text-[10px] font-bold bg-brand-secondary/10 px-2 py-0.5 rounded-full ml-1 inline-block border border-brand-secondary/20 uppercase">
+                Completed
               </span>
             )}
           </p>
@@ -125,19 +135,18 @@ export default function IdeaBreakdownPage() {
               {/* Active Progress Bar */}
               <div
                 className="absolute top-0 left-0 h-full bg-gradient-to-r from-brand-primary to-brand-secondary shadow-[0_0_10px_rgba(69,216,145,0.4)] transition-all duration-700 ease-out"
-                style={{ width: `${(optionalCardsFilled / 3) * 100}%` }}
+                style={{ width: `${(completedCount / totalCards) * 100}%` }}
               />
             </div>
             {/* Steps Indicator */}
             <div className="flex gap-1">
-              {[...Array(3)].map((_, i) => (
+              {[...Array(totalCards)].map((_, i) => (
                 <div
                   key={i}
-                  className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                    i < optionalCardsFilled
-                      ? "bg-brand-primary shadow-[0_0_5px_rgba(69,216,145,0.6)]"
-                      : "bg-brand-surface-light/20"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-colors duration-300 ${i < completedCount
+                    ? "bg-brand-primary shadow-[0_0_5px_rgba(69,216,145,0.6)]"
+                    : "bg-brand-surface-light/20"
+                    }`}
                 />
               ))}
             </div>
@@ -278,17 +287,35 @@ export default function IdeaBreakdownPage() {
           selectedModal === "solution" ||
           selectedModal === "competition" ||
           selectedModal === "story") && (
-          <TextBreakdownModal
+            <TextBreakdownModal
+              isOpen={true}
+              onClose={closeModal}
+              onSave={() => handleSave(selectedModal)}
+              type={selectedModal}
+              currentSavings={currentSavings}
+              completedCount={completedCount}
+              totalCards={totalCards}
+            />
+          )}
+        {selectedModal === "visuals" && (
+          <VisualsModal
             isOpen={true}
             onClose={closeModal}
-            type={selectedModal}
+            onSave={() => handleSave("visuals")}
+            currentSavings={currentSavings}
+            completedCount={completedCount}
+            totalCards={totalCards}
           />
         )}
-        {selectedModal === "visuals" && (
-          <VisualsModal isOpen={true} onClose={closeModal} />
-        )}
         {selectedModal === "ai-interview" && (
-          <AiInterviewModal isOpen={true} onClose={closeModal} />
+          <AiInterviewModal
+            isOpen={true}
+            onClose={closeModal}
+            onSave={() => handleSave("ai-interview")}
+            currentSavings={currentSavings}
+            completedCount={completedCount}
+            totalCards={totalCards}
+          />
         )}
         {showMatch && <MatchOverlay onComplete={handleMatchComplete} />}
       </AnimatePresence>

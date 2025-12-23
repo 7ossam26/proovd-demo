@@ -12,6 +12,9 @@ export default function BreakdownModalLayout({
   children,
   guideTitle,
   onSave,
+  currentSavings = 0,
+  completedCount = 0,
+  totalCards = 6,
 }) {
   if (!isOpen) return null;
 
@@ -54,7 +57,7 @@ export default function BreakdownModalLayout({
               </p>
               <div className="text-right">
                 <span className="block text-xl font-bold text-brand-primary">
-                  $15
+                  ${currentSavings}
                 </span>
                 <span className="block text-[10px] uppercase tracking-wider text-brand-text/60">
                   Saved
@@ -63,11 +66,15 @@ export default function BreakdownModalLayout({
             </div>
             {/* Progress Bar Visual */}
             <div className="h-2 w-full bg-white/10 rounded-full flex gap-1 p-[2px]">
-              <div className="h-full w-1/5 bg-brand-primary rounded-full"></div>
-              <div className="h-full w-1/5 bg-brand-primary rounded-full"></div>
-              <div className="h-full w-1/5 bg-white/5 rounded-full"></div>
-              <div className="h-full w-1/5 bg-white/5 rounded-full"></div>
-              <div className="h-full w-1/5 bg-white/5 rounded-full"></div>
+              {[...Array(totalCards)].map((_, i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    "h-full flex-1 rounded-full transition-colors duration-500",
+                    i < completedCount ? "bg-brand-primary" : "bg-white/5"
+                  )}
+                />
+              ))}
             </div>
           </div>
         </div>

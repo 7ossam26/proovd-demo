@@ -38,7 +38,6 @@ const rewards = [
 export default function ProductPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("story");
-  const [showBackOptions, setShowBackOptions] = useState(false);
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-text antialiased">
@@ -47,31 +46,10 @@ export default function ProductPage() {
         <div className="flex justify-between w-full mb-8 md:mb-0">
           <div className="relative">
             <button
-              onClick={() => setShowBackOptions(!showBackOptions)}
-              onBlur={() => setTimeout(() => setShowBackOptions(false), 200)}
+              onClick={() => router.push("/founder/dashboard")}
               className="p-2 rounded-full hover:bg-brand-surface/30 transition text-brand-text-muted hover:text-brand">
               <span className="material-symbols-outlined">arrow_back</span>
             </button>
-            {showBackOptions && (
-              <div className="absolute left-0 top-full mt-2 w-64 bg-brand-surface border border-brand-border rounded-xl shadow-xl overflow-hidden z-20 animate-in fade-in zoom-in-95 duration-200">
-                <button
-                  onClick={() => router.push("/affiliate/partnerships/active")}
-                  className="w-full text-left px-4 py-3 text-sm text-brand-text hover:bg-white/5 flex items-center gap-3 transition-colors border-b border-brand-border/30">
-                  <span className="material-symbols-outlined text-lg">
-                    storefront
-                  </span>
-                  Back to Partnerships
-                </button>
-                <button
-                  onClick={() => router.push("/founder/dashboard")}
-                  className="w-full text-left px-4 py-3 text-sm text-brand-text hover:bg-white/5 flex items-center gap-3 transition-colors">
-                  <span className="material-symbols-outlined text-lg">
-                    dashboard
-                  </span>
-                  Back to Dashboard
-                </button>
-              </div>
-            )}
           </div>
           <button className="p-2 rounded-full hover:bg-brand-surface/30 transition text-brand-text-muted hover:text-brand">
             <span className="material-symbols-outlined">share</span>
