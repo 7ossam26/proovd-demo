@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Details Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#45D891",
+              "primary-dark": "#1E4D2F",
+              background: "#09110C",
+              "card-bg": "#121a16",
+              "input-bg": "#0e1511",
+              "border-color": "#1E4D2F",
+              "text-main": "#ffffff",
+              "text-muted": "#88998e",
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #09110c;
+        color: white;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #09110c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e4d2f;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #45d891;
+      }
+    </style>
+  </head>
+  <body class="bg-[#09110C] font-sans text-white antialiased">
+    <header
+      class="relative bg-[#09110C] h-auto md:h-[360px] flex flex-col justify-between px-6 py-8 md:px-12 lg:px-24 border-b border-[#1E4D2F]/30">
+      <div class="flex justify-end mb-8 md:mb-0">
+        <button
+          class="p-2 rounded-full hover:bg-[#1E4D2F]/30 transition text-[#88998e] hover:text-[#45D891]">
+          <span class="material-icons-outlined">share</span>
+        </button>
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-4 md:mb-8">
+        <div class="flex items-center gap-5 mb-6 md:mb-0 w-full md:w-auto">
+          <div
+            class="w-16 h-16 rounded-full bg-[#1E4D2F]/20 ring-2 ring-[#45D891]/20 flex items-center justify-center overflow-hidden shrink-0">
+            <img
+              alt="Creator Avatar"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRnpmAvFAHcW2G80oopk3k9-TsexnR5nb7jKGUi342EcCgkbsm9Ua_xbpN1hSANbLur94nbb4X9Ge4C6nkDYMXIju9M5q7Aoe582e5Vc5MqIsMs9wa3giHUS8ppnhqYdQslZYEyyMbEzN7PPeKrrthj5QAI4XmAlLPsxzYp8YbMT8MPxjmz2Vkesmrz90GVGJMXL1MNpLN7I_0TynpDVrLyR82o7Wg7bf0W1LDsZRe92AeXdgTrkcNUc5zRjpkdJ7TvPDFmfaF3j2R" />
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-white tracking-tight">
+              Alex Thompson
+            </h1>
+            <p class="text-sm text-[#88998e] font-medium">Tech</p>
+          </div>
+        </div>
+        <div class="text-left md:text-right w-full md:w-auto">
+          <div class="mb-2">
+            <span class="text-4xl font-bold text-white block tracking-tight"
+              >$45,000</span
+            >
+            <span
+              class="text-xs text-[#88998e] font-medium uppercase tracking-wider"
+              >pledged of $100,000</span
+            >
+          </div>
+          <div class="flex items-baseline justify-start md:justify-end gap-2">
+            <span class="text-3xl font-light text-[#e0e0e0]">1,234</span>
+            <span
+              class="text-xs text-[#88998e] uppercase tracking-wider font-medium"
+              >Backers</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 -mt-12 pb-20 space-y-6 relative z-10">
+      <section
+        class="bg-[#09110C] rounded-xl p-6 md:p-8 border border-[#1E4D2F]/50 shadow-2xl shadow-black/50">
+        <div class="flex items-center gap-4 mb-8">
+          <div
+            class="w-10 h-10 rounded-full bg-[#1E4D2F]/30 flex items-center justify-center text-[#88998e]">
+            <span class="material-icons-outlined text-lg">person</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white text-base">Alex Thompson</h3>
+            <p class="text-xs text-[#88998e]">Tech</p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 border-t border-[#1E4D2F]/30 pt-8">
+          <div class="flex flex-col justify-between">
+            <div>
+              <span
+                class="block text-3xl font-bold text-white mb-1 tracking-tight"
+                >$45,000</span
+              >
+              <span
+                class="text-xs text-[#88998e] font-medium uppercase tracking-wide"
+                >pledged of $100,000</span
+              >
+            </div>
+            <div
+              class="w-full bg-[#1E4D2F]/30 rounded-full h-1.5 mt-4 overflow-hidden">
+              <div
+                class="bg-[#45D891] h-full rounded-full"
+                style="width: 45%"></div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-start pt-1">
+            <span
+              class="block text-3xl font-bold text-white mb-1 tracking-tight"
+              >1,234</span
+            >
+            <span
+              class="text-xs text-[#88998e] font-medium uppercase tracking-wide mb-1"
+              >Backers</span
+            >
+            <div class="flex items-center text-xs text-[#88998e] gap-1 mt-1">
+              <span class="material-icons-outlined text-[14px]">group</span>
+              <span>+123 Today</span>
+            </div>
+          </div>
+          <div class="flex flex-col justify-start pt-1">
+            <span
+              class="block text-3xl font-bold text-white mb-1 tracking-tight"
+              >14</span
+            >
+            <span
+              class="text-xs text-[#88998e] font-medium uppercase tracking-wide mb-1"
+              >Days to go</span
+            >
+            <div class="flex items-center text-xs text-[#88998e] gap-1 mt-1">
+              <span class="material-icons-outlined text-[14px]">schedule</span>
+              <span>Ends March 15</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="w-full py-4 bg-[#1E4D2F]/40 hover:bg-[#1E4D2F]/60 text-white font-semibold rounded-[4px] transition-all shadow-lg uppercase tracking-wider text-sm border border-[#1E4D2F] hover:border-[#45D891]">
+          Back this Project
+        </button>
+      </section>
+      <section
+        class="bg-[#09110C] rounded-xl p-6 md:p-8 border border-[#1E4D2F]/50 shadow-2xl shadow-black/50">
+        <h2 class="text-lg font-bold text-white mb-6 tracking-tight">
+          Select your reward
+        </h2>
+        <div class="space-y-4">
+          <div
+            class="border border-[#1E4D2F]/30 rounded-lg p-6 hover:border-[#45D891] transition duration-300 cursor-pointer group bg-[#0c1410]">
+            <div class="flex justify-between items-start mb-3">
+              <span
+                class="text-sm font-bold text-[#88998e] group-hover:text-[#45D891] transition-colors"
+                >$25</span
+              >
+              <span class="text-xs text-[#5BAA77] font-medium uppercase"
+                >100 backers</span
+              >
+            </div>
+            <h3 class="font-bold text-white mb-2 text-lg">Reward Tier 1</h3>
+            <p class="text-sm text-[#88998e] mb-4 leading-relaxed">
+              Description of what is included in this reward tier.
+            </p>
+            <div
+              class="flex items-center text-xs text-[#6B8E78] gap-1.5 font-medium">
+              <span class="material-icons-outlined text-[14px]">schedule</span>
+              <span>Est. Delivery: Dec 2025</span>
+            </div>
+          </div>
+          <div
+            class="border border-[#1E4D2F]/30 rounded-lg p-6 hover:border-[#45D891] transition duration-300 cursor-pointer group bg-[#0c1410]">
+            <div class="flex justify-between items-start mb-3">
+              <span
+                class="text-sm font-bold text-[#88998e] group-hover:text-[#45D891] transition-colors"
+                >$50</span
+              >
+              <span class="text-xs text-[#5BAA77] font-medium uppercase"
+                >200 backers</span
+              >
+            </div>
+            <h3 class="font-bold text-white mb-2 text-lg">Reward Tier 2</h3>
+            <p class="text-sm text-[#88998e] mb-4 leading-relaxed">
+              Description of what is included in this reward tier.
+            </p>
+            <div
+              class="flex items-center text-xs text-[#6B8E78] gap-1.5 font-medium">
+              <span class="material-icons-outlined text-[14px]">schedule</span>
+              <span>Est. Delivery: Dec 2025</span>
+            </div>
+          </div>
+          <div
+            class="border border-[#1E4D2F]/30 rounded-lg p-6 hover:border-[#45D891] transition duration-300 cursor-pointer group bg-[#0c1410]">
+            <div class="flex justify-between items-start mb-3">
+              <span
+                class="text-sm font-bold text-[#88998e] group-hover:text-[#45D891] transition-colors"
+                >$75</span
+              >
+              <span class="text-xs text-[#5BAA77] font-medium uppercase"
+                >300 backers</span
+              >
+            </div>
+            <h3 class="font-bold text-white mb-2 text-lg">Reward Tier 3</h3>
+            <p class="text-sm text-[#88998e] mb-4 leading-relaxed">
+              Description of what is included in this reward tier.
+            </p>
+            <div
+              class="flex items-center text-xs text-[#6B8E78] gap-1.5 font-medium">
+              <span class="material-icons-outlined text-[14px]">schedule</span>
+              <span>Est. Delivery: Dec 2025</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div
+          class="h-64 bg-[#0c1410] rounded-xl border border-[#1E4D2F]/30"></div>
+        <div class="flex flex-col gap-4 h-64">
+          <div
+            class="flex-1 bg-[#0c1410] rounded-xl border border-[#1E4D2F]/30"></div>
+          <div class="flex-1 flex gap-4">
+            <div
+              class="flex-1 bg-[#0c1410] rounded-xl border border-[#1E4D2F]/30"></div>
+            <div
+              class="flex-1 bg-[#0c1410] rounded-xl border border-[#1E4D2F]/30"></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[#09110C] rounded-xl p-6 md:p-8 border border-[#1E4D2F]/50 shadow-2xl shadow-black/50">
+        <div class="flex gap-8 mb-8 border-b border-[#1E4D2F]/30 pb-0">
+          <button
+            class="px-0 py-4 border-b-2 border-white hover:text-white text-white text-sm font-semibold transition tracking-wide">
+            Story
+          </button>
+          <button
+            class="px-0 py-4 border-b-2 border-transparent hover:border-[#45D891] hover:text-[#45D891] text-[#88998e] text-sm font-medium transition tracking-wide">
+            FAQ
+          </button>
+          <button
+            class="px-0 py-4 border-b-2 border-transparent hover:border-[#45D891] hover:text-[#45D891] text-[#88998e] text-sm font-medium transition tracking-wide">
+            Updates
+          </button>
+        </div>
+        <article class="prose prose-invert max-w-none text-[#88998e]">
+          <h2 class="text-2xl font-bold text-white mb-6 tracking-tight">
+            About this project
+          </h2>
+          <p class="mb-6 leading-7 text-sm text-[#88998e] font-light">
+            In the bustling city of Technopolis, a group of visionary engineers
+            and computer scientists gathered in a small, dimly lit garage. They
+            shared a common dream: to revolutionize the world with artificial
+            intelligence. It all began when Dr. Emily Carter, a renowned AI
+            researcher, stumbled upon a groundbreaking algorithm while working
+            late into the night. This discovery sparked the idea for a company
+            that would harness the power of AI to solve real-world problems.
+            With limited resources but boundless enthusiasm, the team worked
+            tirelessly, fueled by countless cups of coffee and the unwavering
+            belief in their mission. As word of their innovation spread,
+            investors took notice, and soon, the fledgling company secured its
+            first round of funding. This pivotal moment marked the beginning of
+            a journey that would see the company grow from a humble startup to a
+            leader in the AI industry, transforming industries and improving
+            lives along the way.
+          </p>
+          <p class="mb-8 leading-7 text-sm text-[#88998e] font-light">
+            In the bustling city of Technopolis, a group of visionary engineers
+            and computer scientists gathered in a small, dimly lit garage. They
+            shared a common dream: to revolutionize the world with artificial
+            intelligence. It all began when Dr. Emily Carter, a renowned AI
+            researcher, stumbled upon a groundbreaking algorithm while working
+            late into the night. This discovery sparked the idea for a company
+            that the AI industry, transforming industries and improving lives
+            along the way.
+          </p>
+          <div
+            class="w-full h-80 bg-[#0c1410] rounded-lg mb-8 border border-[#1E4D2F]/30"></div>
+          <p class="leading-7 text-sm text-[#88998e] font-light">
+            In the bustling city of Technopolis, a group of visionary engineers
+            and computer scientists gathered in a small, dimly lit garage. They
+            shared a common dream: to revolutionize the world with artificial
+            intelligence. It all began when Dr. Emily Carter, a renowned AI
+            researcher, stumbled upon a groundbreaking algorithm while working
+            late into the night. This discovery sparked the idea for a company
+            that the AI industry, transforming industries and improving lives
+            along the way.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer
+      class="py-8 text-center text-[#5BAA77] text-xs font-medium tracking-wide border-t border-[#1E4D2F]/10 mt-10">
+      © 2024 Project Platform. All rights reserved.
+    </footer>
+  </body>
+</html>
