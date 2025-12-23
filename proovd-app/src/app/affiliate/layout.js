@@ -95,7 +95,7 @@ export default function AffiliateLayout({ children }) {
                 className={cn(
                   "px-6 py-2.5 rounded-lg text-sm font-medium transition-all",
                   isActive
-                    ? "bg-brand-primary text-brand-bg shadow-sm"
+                    ? "bg-brand-primary text-brand-text shadow-sm"
                     : "text-brand-text-muted hover:text-brand-text hover:bg-white/5"
                 )}>
                 {tab.name}

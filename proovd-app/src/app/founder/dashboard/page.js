@@ -65,7 +65,7 @@ export default function FounderDashboard() {
               className={cn(
                 "relative px-4 py-2 text-sm font-medium rounded-lg transition-all z-10",
                 activeTab === tab.id
-                  ? "text-brand-bg bg-brand-primary"
+                  ? "text-brand-text bg-brand-primary"
                   : "text-brand-text-muted hover:text-brand-text"
               )}>
               {activeTab === tab.id && (
