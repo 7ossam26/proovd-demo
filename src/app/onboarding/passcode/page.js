@@ -81,11 +81,9 @@ export default function PasscodePage() {
       <main className="w-full max-w-md relative z-10">
         <div className="mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4 tracking-tight">
-            Set your passcode
+            Start Experince
           </h1>
-          <p className="text-brand-text-muted text-base md:text-lg max-w-xs mx-auto leading-relaxed">
-            Create a secure 3-digit passcode to access your campaign settings.
-          </p>
+
         </div>
 
         <div className="bg-brand-surface/60 backdrop-blur-md border border-brand-primary/10 rounded-2xl p-8 md:p-10 relative overflow-hidden shadow-2xl">
@@ -150,9 +148,7 @@ export default function PasscodePage() {
           </form>
 
           <div className="mt-8 text-center">
-            <button className="text-sm text-brand-text-muted hover:text-brand-primary transition-colors underline decoration-dotted underline-offset-4">
-              Cancel and return to dashboard
-            </button>
+
           </div>
         </div>
       </main>
@@ -201,10 +197,7 @@ export default function PasscodePage() {
                   </h3>
                 </div>
 
-                <p className="text-brand-text-muted text-sm leading-relaxed px-2">
-                  You've unlocked exclusive access to advanced analytics and
-                  high-stake campaign controls.
-                </p>
+
 
                 <div className="w-full pt-4 space-y-3">
                   <Button

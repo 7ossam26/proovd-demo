@@ -102,6 +102,10 @@ export default function PitchPage() {
                 className="py-4 text-lg font-bold shadow-[0_0_15px_rgba(69,216,145,0.2)] hover:shadow-[0_0_25px_rgba(69,216,145,0.4)] rounded-xl">
                 Transform my Idea
               </Button>
+              <p className="text-sm md:text-base text-brand-text-muted/80 font-medium tracking-wide mt-4">
+                When you speak your Ideas out loud, you give them{" "}
+                <span className="text-brand-primary font-bold">Life</span>.
+              </p>
             </motion.div>
           ) : (
             <motion.div
@@ -141,8 +145,8 @@ export default function PitchPage() {
                     onClick={stopRecording}>
                     <div className="absolute inset-0 bg-brand-primary/20 rounded-full animate-ping opacity-50 duration-1000" />
                     <div className="absolute inset-[-20px] bg-brand-primary/5 rounded-full blur-2xl" />
-                    <button className="relative w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-[0_0_50px_-10px_rgba(69,216,145,0.3)] bg-gradient-to-br from-brand-primary to-brand-primary-dark border-[6px] border-brand-surface/50 backdrop-blur-sm z-20">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-md shadow-sm transform transition-transform hover:scale-90" />
+                    <button className="relative w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-[0_0_50px_10px_rgba(69,216,145,.5)] bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-surface/50 backdrop-blur-sm z-20">
+                      <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-lg shadow-md transform transition-transform hover:scale-90" />
                     </button>
                   </motion.div>
                 )}
@@ -196,14 +200,14 @@ export default function PitchPage() {
                         height:
                           voiceState === "recording"
                             ? [
-                                // Dynamic heights for recording
-                                Math.random() * 40 + 10,
-                                Math.random() * 80 + 20,
-                                Math.random() * 40 + 10,
-                              ]
+                              // Dynamic heights for recording
+                              Math.random() * 40 + 10,
+                              Math.random() * 80 + 20,
+                              Math.random() * 40 + 10,
+                            ]
                             : voiceState === "controls"
-                            ? Math.max(20, Math.sin(i) * 50 + 30) // Static-ish wave for controls
-                            : 8, // Flat for ready
+                              ? Math.max(20, Math.sin(i) * 50 + 30) // Static-ish wave for controls
+                              : 8, // Flat for ready
                         opacity: voiceState === "recording" ? 1 : 0.5,
                         boxShadow:
                           voiceState === "recording"
@@ -241,13 +245,6 @@ export default function PitchPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        <footer className="absolute bottom-8 w-full text-center px-6 z-10">
-          <p className="text-sm md:text-base text-brand-text-muted/80 font-medium tracking-wide">
-            When you speak your Ideas out loud, you give them{" "}
-            <span className="text-brand-primary font-bold">Life</span>.
-          </p>
-        </footer>
       </main>
     </div>
   );

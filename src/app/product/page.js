@@ -289,7 +289,7 @@ export default function ProductPage() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-brand-surface-light text-xs font-medium tracking-wide border-t border-brand-surface/10 mt-10">
-        © 2024 Project Platform. All rights reserved.
+        © 2025 Proovd Dev Team. All rights reserved.
       </footer>
     </div>
   );
