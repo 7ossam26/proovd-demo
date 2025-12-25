@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,12 @@ export function Modal({
   size = "md",
   className,
 }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -31,6 +37,8 @@ export function Modal({
     lg: "max-w-4xl",
     full: "max-w-[95vw]",
   };
+
+  if (!mounted) return null;
 
   return createPortal(
     <AnimatePresence>
