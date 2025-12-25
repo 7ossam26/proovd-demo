@@ -44,40 +44,37 @@ export default function CampaignSettingsPage() {
             Campaign Duration
           </label>
           <span className="text-brand-primary font-bold text-lg">
-            {["7 Days", "30 Days", "60 Days", "90 Days"][duration - 1]}
+            {["1 weeks", "2 weeks", "3 weeks"][duration - 1]}
           </span>
         </div>
         <div className="relative w-full h-16 flex items-center select-none px-2 mt-4">
-          <div className="absolute left-0 right-0 h-2 bg-brand-surface-light/10 rounded-full">
+          <div className="absolute left-0 right-0 h-2 bg-brand-surface-light/10 rounded-full top-1/2 -translate-y-1/2">
             <div
               className="h-full bg-gradient-to-r from-brand-primary to-brand-primary-dark transition-all duration-500 ease-out rounded-full shadow-[0_0_15px_rgba(69,216,145,0.3)]"
-              style={{ width: `${((duration - 1) / 3) * 100}%` }}
+              style={{ width: `${((duration - 1) / 2) * 100}%` }}
             />
           </div>
-          <div className="absolute w-full left-0 flex justify-between px-0">
-            {[1, 2, 3, 4].map((step, index) => (
+          <div className="absolute w-full left-0 flex justify-between px-0 top-1/2 -translate-y-1/2">
+            {[1, 2, 3].map((step, index) => (
               <div
                 key={step}
                 onClick={() => setDuration(step)}
                 className="relative z-10 flex flex-col items-center cursor-pointer group">
                 <div
-                  className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                    step <= duration
-                      ? "bg-brand-primary shadow-[0_0_10px_rgba(69,216,145,0.5)]"
-                      : "bg-brand-surface-light/30"
-                  } ${
-                    step === duration
+                  className={`w-4 h-4 rounded-full transition-all duration-300 ${step <= duration
+                    ? "bg-brand-primary shadow-[0_0_10px_rgba(69,216,145,0.5)]"
+                    : "bg-brand-surface-light/30"
+                    } ${step === duration
                       ? "w-6 h-6 border-4 border-brand-bg scale-110 shadow-[0_0_20px_rgba(69,216,145,0.4)]"
                       : "group-hover:bg-brand-primary/60"
-                  }`}
+                    }`}
                 />
                 <span
-                  className={`absolute top-8 whitespace-nowrap text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${
-                    step === duration
-                      ? "text-brand-primary"
-                      : "text-brand-text-muted/60"
-                  }`}>
-                  {["7 Days", "30 Days", "60 Days", "90 Days"][index]}
+                  className={`absolute top-8 whitespace-nowrap text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${step === duration
+                    ? "text-brand-primary"
+                    : "text-brand-text-muted/60"
+                    }`}>
+                  {["1 weeks", "2 weeks", "3 weeks"][index]}
                 </span>
               </div>
             ))}
